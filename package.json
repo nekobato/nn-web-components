@@ -1,0 +1,48 @@
+{
+  "name": "@nekobato/nn-web-components",
+  "version": "0.0.0",
+  "description": "A collection of Web Components by @nekobato.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/nn-web-components.umd.cjs",
+  "module": "./dist/nn-web-components.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/nn-web-components.js",
+      "require": "./dist/nn-web-components.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "dev": "vitepress dev docs --host 127.0.0.1",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs --host 127.0.0.1",
+    "docs:preview": "vitepress preview docs --host 127.0.0.1",
+    "format": "prettier . --check",
+    "format:write": "prettier . --write",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "globals": "latest",
+    "happy-dom": "latest",
+    "prettier": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest",
+    "vite": "latest",
+    "vitepress": "latest",
+    "vitest": "latest"
+  },
+  "dependencies": {
+    "lit": "^3.3.2"
+  }
+}
