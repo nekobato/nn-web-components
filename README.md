@@ -1,6 +1,30 @@
-# nnc - nekobato no Web Components
+# nnwc - nekobato no Web Components
 
-A collection of Web Components by @nekobato
+A collection of Web Components by @nekobato.
+
+## Installation
+
+```sh
+npm install @nekobato/nnwc
+```
+
+## Usage
+
+Import the package root to register every component.
+
+```ts
+import "@nekobato/nnwc";
+```
+
+Import a component subpath to register only that component.
+
+```ts
+import "@nekobato/nnwc/nnc-e-display";
+```
+
+```html
+<nnc-e-display label="まもなく 1 番線に 快速が到着します"></nnc-e-display>
+```
 
 ## Components
 
@@ -22,6 +46,21 @@ npm run typecheck
 npm run format
 npm run build
 npm run docs:build
+```
+
+## Release
+
+Before publishing, run the release check.
+
+```sh
+npm run release:check
+```
+
+The package is configured with `publishConfig.access` set to `public`.
+Publish with an npm account that has access to the `@nekobato` scope.
+
+```sh
+npm publish
 ```
 
 ## GitHub Pages

@@ -1,21 +1,45 @@
 {
-  "name": "@nekobato/nn-web-components",
+  "name": "@nekobato/nnwc",
   "version": "0.0.0",
   "description": "A collection of Web Components by @nekobato.",
   "type": "module",
   "license": "MIT",
-  "main": "./dist/nn-web-components.umd.cjs",
-  "module": "./dist/nn-web-components.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nekobato/nn-web-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nekobato/nn-web-components/issues"
+  },
+  "homepage": "https://github.com/nekobato/nn-web-components#readme",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/nn-web-components.js",
-      "require": "./dist/nn-web-components.umd.cjs"
-    }
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./nnc-e-display": {
+      "types": "./dist/types/nnc-e-display.d.ts",
+      "import": "./dist/nnc-e-display.js",
+      "default": "./dist/nnc-e-display.js"
+    },
+    "./package.json": "./package.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "custom-elements",
+    "lit",
+    "web-components"
+  ],
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
@@ -26,6 +50,10 @@
     "format": "prettier . --check",
     "format:write": "prettier . --write",
     "lint": "eslint .",
+    "pack:dry-run": "npm pack --dry-run",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm test && npm run lint && npm run typecheck && npm run format",
+    "release:check": "npm test && npm run lint && npm run typecheck && npm run format && npm run pack:dry-run",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },

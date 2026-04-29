@@ -1,3 +1,8 @@
+/**
+ * Package root entry that exports and registers all nnwc components.
+ *
+ * @module
+ */
 import { defineNncEDisplay } from "./nnc-e-display";
 
 export {

@@ -1,3 +1,8 @@
+/**
+ * `<nnc-e-display>` entry that exports the element API and registers it in browsers.
+ *
+ * @module
+ */
 import { LitElement, css, html } from "lit";
 import type { PropertyValues } from "lit";
 
@@ -427,6 +432,10 @@ export const defineNncEDisplay = (
     registry.define(elementName, NncEDisplayElement);
   }
 };
+
+if (typeof customElements !== "undefined") {
+  defineNncEDisplay();
+}
 
 declare global {
   interface HTMLElementTagNameMap {

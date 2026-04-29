@@ -16,7 +16,7 @@ export default defineConfig({
   ],
   lang: "ja-JP",
   lastUpdated: true,
-  title: "nn-web-components",
+  title: "nnwc",
   themeConfig: {
     docFooter: {
       next: "次のページ",
