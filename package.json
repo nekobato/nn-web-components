@@ -59,16 +59,16 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/node": "25.8.0",
+    "@types/node": "25.9.1",
     "eslint": "10.4.0",
     "globals": "17.6.0",
     "happy-dom": "20.9.0",
     "prettier": "3.8.3",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.3",
-    "vite": "8.0.13",
+    "typescript-eslint": "8.59.4",
+    "vite": "8.0.14",
     "vitepress": "1.6.4",
-    "vitest": "4.1.6"
+    "vitest": "4.1.7"
   },
   "dependencies": {
     "lit": "3.3.3"
