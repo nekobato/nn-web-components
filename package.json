@@ -60,22 +60,22 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@types/node": "26.6.5",
-    "eslint": "10.12.0",
+    "eslint": "10.13.0",
     "globals": "17.13.0",
-    "happy-dom": "21.0.0",
+    "happy-dom": "21.0.4",
     "prettier": "3.9.10",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.71.1",
+    "typescript-eslint": "8.71.2",
     "vite": "8.3.4",
     "vitepress": "1.6.4",
-    "vitest": "5.0.3"
+    "vitest": "5.0.5"
   },
   "dependencies": {
     "lit": "3.3.3"
   },
   "overrides": {
     "vitepress": {
-      "vite": "6.4.3"
+      "vite": "6.4.4"
     }
   }
 }
